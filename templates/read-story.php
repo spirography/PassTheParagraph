@@ -25,7 +25,6 @@
             echo "var story_id = ". json_encode($story_id) . ";\n";
             echo "render_fragments(false);\n";
         ?>;/*]]>*/</script>
-
 </div>
 
 <!-- Form for Submitting Next Part of Story -->
