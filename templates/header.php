@@ -2,6 +2,7 @@
 <html>
   <head>
     <!-- CSS References Go Here -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
 
     <!-- Favicon References Go Here -->
 
