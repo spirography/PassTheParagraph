@@ -17,6 +17,7 @@
     <?php endif ?>
 
     <!-- JavaScript References -->
+    <script src="js/script.js"></script>
   </head>
 
   <!-- Body Start -->
