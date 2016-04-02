@@ -3,6 +3,7 @@
   <head>
     <!-- CSS References Go Here -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/form.css" rel="stylesheet" type="text/css">
     <link href="css/navbar.css" rel="stylesheet" type="text/css">
 
     <!-- Favicon References Go Here -->
