@@ -6,13 +6,23 @@ var sentence_id = 0;
 /*
  * Renders all sentence fragments currently held
  */
-function render_fragments() {
+function render_fragments(scrollToBottom) {
     if (contributions === undefined || contributions === null) {
         console.log("Tried to render story fragments, but there was nothing to render");
         return;
     }
 
     var sentencesDiv = document.getElementById("sentences");
+
+    // check if currently scrolled to the bottom
+    // (if true, then rescroll as new sentence divs are added)
+    if (scrollToBottom === undefined) {
+        if (sentencesDiv.scrollTop >= sentencesDiv.scrollHeight - sentencesDiv.offsetHeight) {
+            scrollToBottom = true;
+        } else {
+            scrollToBottom = false;
+        }
+    }
 
     contributions.forEach(function(entry) {
         console.log(entry);
@@ -26,16 +36,16 @@ function render_fragments() {
     sentence_id = contributions[contributions.length-1].id;
 
     // scroll down to most recent updates
-    var prevScrollHeight = 0;
-    var scrollInterval = setInterval(function() {
-        sentencesDiv.scrollTop += Math.pow((sentencesDiv.scrollHeight - sentencesDiv.scrollTop), 2)/50000;
-        if (prevScrollHeight == sentencesDiv.scrollTop) {
-            clearInterval(scrollInterval);
-        } else {
-            prevScrollHeight = sentencesDiv.scrollTop;
-        }
-        console.log(sentencesDiv.scrollTop + "\t" + sentencesDiv.scrollHeight);
-    }, 10);
+    // only scroll if page was already scrolled to the bottom
+
+    if (scrollToBottom) {
+        var scrollInterval = setInterval(function() {
+            sentencesDiv.scrollTop += Math.pow((sentencesDiv.scrollHeight - sentencesDiv.scrollTop), 2)/50000;
+            if (sentencesDiv.scrollTop >= sentencesDiv.scrollHeight - sentencesDiv.offsetHeight) {
+                clearInterval(scrollInterval);
+            }
+        }, 10);
+    }
 }
 
 /*
