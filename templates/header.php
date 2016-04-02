@@ -56,12 +56,12 @@
 				<li><a href="index.php">home</a></li>
 				<li class="dropdown"><a class ="dropdown-toggle" data-toggle="dropdown" href="browse.php">browse<span class="caret"></span></a>
 	 				<ul class="dropdown-menu">
-		 				<li><a href="#">Realistic Fiction</a></li>
-		 				<li><a href="#">Science Fiction</a></li>
-		 				<li><a href="#">Mystery</a></li>
-		 				<li><a href="#">Fantasy</a></li>
-						<li><a href="#">Historical</a></li>
-						<li><a href="#">Comedy</a></li>
+		 				<li><a href="browse.php?g=1">Realistic Fiction</a></li>
+		 				<li><a href="browse.php?g=2">Science Fiction</a></li>
+		 				<li><a href="browse.php?g=3">Mystery</a></li>
+		 				<li><a href="browse.php?g=4">Fantasy</a></li>
+						<li><a href="browse.php?g=5">Historical</a></li>
+						<li><a href="browse.php?g=6">Comedy</a></li>
 	 				</ul>
 				</li>
 				<li><a href="#contact">contact</a></li>
