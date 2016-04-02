@@ -24,18 +24,19 @@
             $contributions = query("SELECT content, date_created FROM submissions WHERE story_id=?", $story_id);
             $js_array = json_encode($contributions);
             echo "var contributions = ". $js_array . ";\n";
+            echo "render_fragments();\n";
         ?>;/*]]>*/</script>
-</table>
-<div style="height:380px;min-width:312px;overflow-y:scroll">
-<table style="table-layout:fixed">
-<?php
-    // display the continuations of the story
-    // TODO: only display the first few
-    // $fragments = '';
-    // foreach ($userdata as $row)
-    // {
-    //     //     $table = "<tr><td>{$row["timestamp"]}</td><td>{$row["level"]}</td><td>{$row["player_kills"]}</td><td>{$row["enemy_kills"]}</td></tr>" . $table;
-    // }
-    //     print($fragments);
-        ?>
-</table>
+
+<!-- Form for Submitting Next Part of Story -->
+<div id="sentence-submission">
+
+        <!-- CONTRIBUTION START -->
+        <textarea id="sentence-form" name="sentence" rows="2" cols="70" maxlength="140">
+
+        </textarea>
+        <!--CONTRIBUTION END -->
+
+        <!-- SUBMISSION BUTTON START -->
+        <button onclick="submit_sentence()">Add to Story</button>
+        <!-- SUBMISSION BUTTON END -->
+</div>
