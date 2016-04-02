@@ -3,3 +3,5 @@ A website where users write stories together, one sentence at a time.  Created a
 
 
 This is a sample commit.
+
+This is a second commit.
