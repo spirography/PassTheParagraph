@@ -23,6 +23,9 @@
   <body>
       <div id="container">
           <!-- Navbar Start -->
+          <nav id="navbar">
+
+          </nav>
 
           <!-- Navbar End -->
 
