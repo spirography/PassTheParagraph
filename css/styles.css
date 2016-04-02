@@ -15,8 +15,22 @@ body {
     background: grey;
 }
 
+#content {
+    width: 100%;
+    height: 550px; // TODO: make more fluid and take up all space below navbar
+}
+
 #sidebar {
+    float: left;
     width: 200px;
-    height: 200px;
+    height: 100%;
+    background: orange;
     border-right: 10px solid grey;
+}
+
+#previews {
+    float: left;
+    width: 590px;
+    height: 100%;
+    background-color: green;
 }

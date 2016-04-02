@@ -30,3 +30,4 @@
           <!-- Navbar End -->
 
           <!-- Content Goes Here -->
+          <div id="content">
