@@ -31,9 +31,7 @@
 <div id="sentence-submission">
 
         <!-- CONTRIBUTION START -->
-        <textarea id="sentence-form" name="sentence" rows="2" cols="70" maxlength="140">
-
-        </textarea>
+        <textarea id="sentence-form" name="sentence" rows="2" cols="70" maxlength="140"></textarea>
         <!--CONTRIBUTION END -->
 
         <!-- SUBMISSION BUTTON START -->

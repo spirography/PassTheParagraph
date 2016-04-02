@@ -16,9 +16,7 @@
         <!-- GENRE END -->
 
         <!-- FIRST SENTENCE START -->
-        <textarea name="beginning" rows="2" cols="70" maxlength="140">
-
-        </textarea>
+        <textarea name="beginning" rows="2" cols="70" maxlength="140"></textarea>
         <!--FIRST SENTENCE END -->
 
         <!-- SUBMISSION BUTTON START -->
