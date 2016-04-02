@@ -1,73 +1,45 @@
-body {
-    background: #88Dff3; /* red */
-    font-family: Helvetica;
-}
 
-#container {
-    width: 800px;
-    height: 600px;
+
+#reading-container {
+    max-width: 800px;
     margin: auto;
-    margin-top: 100px;
-    background: white;
 }
-
-#navbar {
-    height: 50px;
-    background: #e74c3c;
-}
-
-#content {
-    width: 100%;
-    height: 550px; /* TODO: make more fluid and take up all space below navbar */
-}
-
-#sidebar {
-    float: left;
-    width: 200px;
-    height: 100%;
-    background: white;
-    border-right: 10px solid #e74c3c; /* red */
-}
-
-#previews {
-    float: left;
-    width: 590px;
-    height: 100%;
-    background: linear-gradient(#fff, rgba(231, 76, 80, 0.5)); /* light red gradient */
-}
-
 #sentences {
-    height: 350px;
+    height: 500px;
     overflow-y: scroll;
 }
 
-/* STORY PREVIEW BOXES START */
-.story-preview {
-    margin: 10px;
+#sentence-submission {
+    background-color: white;
     padding: 10px;
-    background: white;
-    border: 1px solid #521A14; /* very dark red */
+}
+#sentence-display {
+    text-align: right;
+}
+
+/* STORY PREVIEW BOXES START */
+.fragment {
+    position: relative;
+    margin: 10px;
+    padding: 20px 30px;
+    min-height: 100px;
+    border-left: 4px solid #e74c3c;
+    background: #eee;
+    /*border: 4px solid #ccc; /* very dark red */
     border-radius: 2px;
     font-size: 20px;
 }
-.story-preview h1 {
-    text-align: center;
+.fragment p {
 }
-.story-preview p {
-    text-align: center;
-}
-.story-preview p:before, .story-preview p:after {
-    content: "\"";
-}
-.story-preview span {
+
+.fragment span {
+    display: block;
+    position: absolute;
     color: #8E2E24; /* dark red */
     font-size: 12px;
-}
-.story-preview span:first-child {
-    float: left;
-}
-.story-preview span:last-child {
-    float: right;
+
+    right: 10px;
+    bottom: 5px;
 }
 /* STORY PREVIEW BOXES END */
 

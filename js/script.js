@@ -1,6 +1,6 @@
 console.log("JAVASCRIPT LOADED");
 var contributions;
-var story_id = 25;
+var story_id;
 var sentence_id = 0;
 
 /*
@@ -27,7 +27,7 @@ function render_fragments(scrollToBottom) {
     contributions.forEach(function(entry) {
         console.log(entry);
         sentencesDiv.innerHTML +=
-            '<div class="story-preview">' +
+            '<div class="fragment">' +
                 '<p>' + entry.content + '</p>' +
                 '<span></span><span>' + entry.date_created +'</span>' +
             '</div>';
@@ -46,6 +46,22 @@ function render_fragments(scrollToBottom) {
             }
         }, 10);
     }
+}
+
+/*
+ * Displays the number of characters typed out of the allotted amount
+ */
+function display_char_limit() {
+    console.log("hi");
+    // get character limit
+    var char_limit = document.getElementById("sentence-form").maxLength;
+    var num_chars = document.getElementById("sentence-form").value.length;
+    if (num_chars === char_limit) {
+        document.getElementById("sentence-display").innerHTML = '<span style="color:red">' + num_chars + " / " + char_limit + '</span>';
+    } else {
+        document.getElementById("sentence-display").innerHTML = '<span>' + num_chars + " / " + char_limit + '</span>';
+    }
+
 }
 
 /*

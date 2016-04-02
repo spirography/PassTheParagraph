@@ -8,20 +8,21 @@
         apologize("NOT FOUND");
     }
 
-    foreach($story[0] as $key => $value)
+    /*foreach($story[0] as $key => $value)
     {
         echo $key." has the value ". $value . "<br>";
-    }
+    }*/
 
-    echo "<h1>" . $story[0]["title"] . "</h1>";
+    echo '<div class="jumbotron text-center" style="padding: 15px 0;"><h1>' . $story[0]["title"] . '</h1></div>';
 ?>
-
+<div id="reading-container">
 <div id="sentences">
 <!-- Story Submissions and Stuff -->
 <script type='text/javascript'>/*<![CDATA[*/<?php
             $contributions = query("SELECT id, content, date_created FROM submissions WHERE story_id=?", $story_id);
             $js_array = json_encode($contributions);
             echo "var contributions = ". $js_array . ";\n";
+            echo "var story_id = ". json_encode($story_id) . ";\n";
             echo "render_fragments(false);\n";
         ?>;/*]]>*/</script>
 
@@ -29,12 +30,14 @@
 
 <!-- Form for Submitting Next Part of Story -->
 <div id="sentence-submission">
+    <div id="sentence-display">&nbsp;</div>
 
         <!-- CONTRIBUTION START -->
-        <textarea id="sentence-form" name="sentence" rows="2" cols="70" maxlength="140"></textarea>
+        <textarea id="sentence-form" name="sentence" rows="2" cols="70" maxlength="140" onchange="display_char_limit()" onkeyup="display_char_limit()" class="form-control"></textarea>
         <!--CONTRIBUTION END -->
 
         <!-- SUBMISSION BUTTON START -->
-        <button onclick="submit_sentence()">Add to Story</button>
+        <button onclick="submit_sentence()" class="btn btn-default">Add to Story</button>
         <!-- SUBMISSION BUTTON END -->
+</div>
 </div>

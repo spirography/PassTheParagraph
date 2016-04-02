@@ -20,6 +20,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="css/responsive.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
 
 	<script src="js/script.js"></script>
 
@@ -35,7 +36,7 @@
 <body>
 
 <!-- Navigation bar -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-top">
 
 	<div class="container-fluid">
 		<div class="navbar-header">
