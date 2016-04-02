@@ -55,7 +55,14 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="index.php">home</a></li>
 				<li class="dropdown"><a class ="dropdown-toggle" data-toggle="dropdown" href="browse.php">browse<span class="caret"></span></a>
-
+	 				<ul class="dropdown-menu">
+		 				<li><a href="#">Realistic Fiction</a></li>
+		 				<li><a href="#">Science Fiction</a></li>
+		 				<li><a href="#">Mystery</a></li>
+		 				<li><a href="#">Fantasy</a></li>
+						<li><a href="#">Historical</a></li>
+						<li><a href="#">Comedy</a></li>
+	 				</ul>
 				</li>
 				<li><a href="#contact">contact</a></li>
 			</ul>
