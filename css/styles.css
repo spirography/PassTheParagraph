@@ -1,5 +1,5 @@
 body {
-    background: #88Dff3;
+    background: #88Dff3; /* red */
     font-family: Helvetica;
 }
 
@@ -13,7 +13,7 @@ body {
 
 #navbar {
     height: 50px;
-    background: grey;
+    background: #e74c3c;
 }
 
 #content {
@@ -26,14 +26,14 @@ body {
     width: 200px;
     height: 100%;
     background: white;
-    border-right: 10px solid grey;
+    border-right: 10px solid #e74c3c; /* red */
 }
 
 #previews {
     float: left;
     width: 590px;
     height: 100%;
-    background-color: #C0F757;
+    background: linear-gradient(#fff, rgba(231, 76, 80, 0.5)); /* light red gradient */
 }
 
 #sentences {
@@ -46,7 +46,9 @@ body {
     margin: 10px;
     padding: 10px;
     background: white;
-    border: 1px solid black;
+    border: 1px solid #521A14; /* very dark red */
+    border-radius: 2px;
+    font-size: 20px;
 }
 .story-preview h1 {
     text-align: center;
@@ -58,7 +60,8 @@ body {
     content: "\"";
 }
 .story-preview span {
-    color: #555;
+    color: #8E2E24; /* dark red */
+    font-size: 12px;
 }
 .story-preview span:first-child {
     float: left;

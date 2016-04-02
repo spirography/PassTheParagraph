@@ -1,0 +1,55 @@
+.navbar {
+/*background-color: #fff;*/
+font-family: 'Special Elite', cursive;
+margin-bottom: 0;
+z-index: 9999;
+border: 0;
+font-size: 15px !important;
+line-height: 1.42857143 !important;
+border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: #000 !important;
+}
+
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: red !important;
+  background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #000 !important;
+}
+
+.jumbotron {
+    background-color: #eee;
+}
+
+.period {
+    color: red;
+}
+
+.col-md-4 {
+
+}
+
+#container-one {
+    background-color: red;
+}
+
+
+/* footer */
+footer {
+    background-color: #eee;
+    padding: 32px;
+}
+
+
+/* Media */
+@media screen and (max-width: 768px) {
+.col-sm-4 {
+  text-align: center;
+  margin: 25px 0;
+}
