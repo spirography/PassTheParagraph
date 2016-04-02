@@ -36,6 +36,11 @@ body {
     background-color: #C0F757;
 }
 
+#sentences {
+    height: 350px;
+    overflow-y: scroll;
+}
+
 /* STORY PREVIEW BOXES START */
 .story-preview {
     margin: 10px;
