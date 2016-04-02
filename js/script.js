@@ -12,9 +12,11 @@ function render_fragments() {
         return;
     }
 
+    var sentencesDiv = document.getElementById("sentences");
+
     contributions.forEach(function(entry) {
         console.log(entry);
-        document.getElementById("sentences").innerHTML +=
+        sentencesDiv.innerHTML +=
             '<div class="story-preview">' +
                 '<p>' + entry.content + '</p>' +
                 '<span></span><span>' + entry.date_created +'</span>' +
@@ -22,6 +24,18 @@ function render_fragments() {
     });
 
     sentence_id = contributions[contributions.length-1].id;
+
+    // scroll down to most recent updates
+    var prevScrollHeight = 0;
+    var scrollInterval = setInterval(function() {
+        sentencesDiv.scrollTop += Math.pow((sentencesDiv.scrollHeight - sentencesDiv.scrollTop), 2)/50000;
+        if (prevScrollHeight == sentencesDiv.scrollTop) {
+            clearInterval(scrollInterval);
+        } else {
+            prevScrollHeight = sentencesDiv.scrollTop;
+        }
+        console.log(sentencesDiv.scrollTop + "\t" + sentencesDiv.scrollHeight);
+    }, 10);
 }
 
 /*
@@ -74,9 +88,11 @@ function get_updates(story_id, last_sentence_id) {
     request.onreadystatechange = function () {
         var DONE = this.DONE || 4;
         if (this.readyState === DONE && this.status == 200){
-            // TODO: DO RESPONSE STUFF HERE
             var response = JSON.parse(this.responseText);
             console.log(response);
+            if (response.length < 1) {
+                return; // no updates
+            }
             console.log(response[response.length-1].id);
             sentence_id = response[response.length-1].id;
 

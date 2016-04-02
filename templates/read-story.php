@@ -1,5 +1,3 @@
-<div id="sentences">
-
 <!-- Story Title -->
 <?php
 
@@ -18,7 +16,7 @@
     echo "<h1>" . $story[0]["title"] . "</h1>";
 ?>
 
-
+<div id="sentences">
 <!-- Story Submissions and Stuff -->
 <script type='text/javascript'>/*<![CDATA[*/<?php
             $contributions = query("SELECT id, content, date_created FROM submissions WHERE story_id=?", $story_id);
