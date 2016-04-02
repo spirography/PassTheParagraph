@@ -6,7 +6,7 @@ require("includes/config.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // check if values are given
-    $contents = json_decode(stripslashes(preg_replace("/\n/", "", file_get_contents("php://input"))), true);
+    $contents = json_decode(file_get_contents("php://input"), true);
     if ($contents == null) {
         echo "ERROR";
     } else {

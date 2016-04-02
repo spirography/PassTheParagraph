@@ -1,4 +1,4 @@
-
+<div id="sentences">
 
 <!-- Story Title -->
 <?php
@@ -26,6 +26,8 @@
             echo "var contributions = ". $js_array . ";\n";
             echo "render_fragments();\n";
         ?>;/*]]>*/</script>
+
+</div>
 
 <!-- Form for Submitting Next Part of Story -->
 <div id="sentence-submission">

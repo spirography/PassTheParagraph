@@ -14,7 +14,7 @@ function render_fragments() {
 
     contributions.forEach(function(entry) {
         console.log(entry);
-        document.getElementById("content").innerHTML +=
+        document.getElementById("sentences").innerHTML +=
             '<div class="story-preview">' +
                 '<p>' + entry.content + '</p>' +
                 '<span></span><span>' + entry.date_created +'</span>' +
@@ -31,7 +31,7 @@ function render_fragments() {
 function submit_sentence() {
 
     // get data from post
-    var data = document.getElementById('sentence-form').value;
+    var text = document.getElementById('sentence-form').value;
 
     // TODO: check on client side sentence is valid (eg. not too long)
 
@@ -49,7 +49,9 @@ function submit_sentence() {
 
     request.open('POST', 'submit_sentence.php', true);
     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-    request.send(JSON.stringify({content: data, story: 25})); // TODO: use correct story id
+    var data = {content: text.replace(/\n/g, ''), story: story_id}
+    request.send(JSON.stringify(data)); // TODO: use correct story id
+    console.log("Data: ", data);
 }
 
 /*
@@ -86,6 +88,7 @@ function get_updates(story_id, last_sentence_id) {
 
     request.open('POST', 'check_sentence_update.php', true);
     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-    request.send(JSON.stringify({sentence: last_sentence_id, story: story_id})); // TODO: use correct story id
+    var data = {sentence: last_sentence_id, story: story_id};
+    request.send(JSON.stringify(data)); // TODO: use correct story id
 
 }
