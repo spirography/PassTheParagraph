@@ -62,3 +62,11 @@ body {
     float: right;
 }
 /* STORY PREVIEW BOXES END */
+
+
+
+/* INPUT BOX STUFF START */
+textarea {
+    resize: none;
+}
+/* INPUT BOX STUFF END */

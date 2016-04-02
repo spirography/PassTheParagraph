@@ -32,6 +32,14 @@
         exit;
     }
 
+    /*
+     * Establishes connection to the database
+     */
+    function connect()
+    {
+        return mysqli_connect(SERVER, USERNAME, PASSWORD, DATABASE);
+    }
+
 
 
     /**
