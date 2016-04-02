@@ -134,3 +134,48 @@ function get_updates(story_id, last_sentence_id) {
     request.send(JSON.stringify(data)); // TODO: use correct story id
 
 }
+
+
+
+
+
+
+
+var stories;
+var last_story_id;
+
+// browse by genre
+function display_stories() {
+    if (stories === undefined || stories === null) {
+        console.log("Tried to render a list of stories in a given genre, but there was nothing to render");
+        return;
+    }
+
+    var storiesDiv = document.getElementById("story-container");
+
+    var index = 0;
+    // iterate over each story and display it
+    storiesDiv.innerHTML += '<div>';
+    for (var i = 0; i < stories.length; i++){
+
+        // add new row if index is even
+        if (index % 2 === 0) {
+            storiesDiv.innerHTML += '</div>'
+            storiesDiv.innerHTML += '<div class="row text-center">'
+        }
+        storiesDiv.innerHTML +=
+            '<a href="read.php?s=' + stories[stories.length-i-1].id + '">' +
+            '<div class="col-md-6 row-height">' +
+            '<div class="story-preview">' +
+            '<h2>' + stories[stories.length-i-1].title + '</h2>' +
+            '<p>' +
+            // text goes here
+           '</div>' +
+           '</div>' +
+           '</a>'
+        index++;
+    }
+    storiesDiv.innerHTML += '</div>';
+
+    last_story_id = stories[stories.length-1].id;
+}

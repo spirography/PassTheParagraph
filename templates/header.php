@@ -45,7 +45,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span></button>
 			<!-- <img src="img/logo.png" href="pass the paragraph logo" width="35"> -->
-			<a id="logo" class="navbar-brand" href="#home">pass the paragraph<span class="period">.</span></a>
+			<a id="logo" class="navbar-brand" href="index.php">pass the paragraph<span class="period">.</span></a>
 
 		</div>
 
@@ -53,8 +53,8 @@
 
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#home">home</a></li>
-				<li class="dropdown"><a class ="dropdown-toggle" data-toggle="dropdown" href="#browse">browse<span class="caret"></span></a>
+				<li><a href="index.php">home</a></li>
+				<li class="dropdown"><a class ="dropdown-toggle" data-toggle="dropdown" href="browse.php">browse<span class="caret"></span></a>
 
 				</li>
 				<li><a href="#contact">contact</a></li>
