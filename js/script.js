@@ -209,7 +209,7 @@ function display_stories(cols) {
             '<div class="story-preview">' +
             '<h2>' + stories[i].title + '</h2>' +
             '<p>' +
-            // text goes here
+            stories[i].content +
            '</div>' +
            '</div>' +
            '</a>'

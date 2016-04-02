@@ -14,6 +14,11 @@
     <script type='text/javascript'>/*<![CDATA[*/
         <?php
                 $stories = query("SELECT * from stories ORDER BY id DESC LIMIT 6"); // TODO: make AJAX-ey
+				for($i = 0; $i < count($stories); $i++) { // get hook of the story
+					$val = query("SELECT content from submissions WHERE story_id = ? LIMIT 1", $stories[$i]["id"]);
+					$stories[$i]["content"] = $val[0]["content"];
+					echo "console.log(" . json_encode($val) . ");\n";
+				}
                 // get first sentences
                 $js_array = json_encode($stories);
                 echo "var stories = ". $js_array . ";\n";
