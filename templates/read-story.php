@@ -24,6 +24,7 @@
             echo "var contributions = ". $js_array . ";\n";
             echo "var story_id = parseInt(". json_encode($story_id) . ");\n";
             echo "render_fragments(false);\n";
+            echo "start_checking_a_story_for_updates();\n"; // check if others have added to story
         ?>;/*]]>*/</script>
 </div>
 
