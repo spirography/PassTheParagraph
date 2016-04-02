@@ -12,7 +12,7 @@
       <?= htmlspecialchars($title) ?>
     </title>
     <?php else: ?>
-    <title>HH Legendary
+    <title>Pass the Paragraph
     </title>
     <?php endif ?>
 
