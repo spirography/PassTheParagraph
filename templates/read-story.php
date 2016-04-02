@@ -22,7 +22,7 @@
             $contributions = query("SELECT id, content, date_created FROM submissions WHERE story_id=?", $story_id);
             $js_array = json_encode($contributions);
             echo "var contributions = ". $js_array . ";\n";
-            echo "var story_id = ". json_encode($story_id) . ";\n";
+            echo "var story_id = parseInt(". json_encode($story_id) . ");\n";
             echo "render_fragments(false);\n";
         ?>;/*]]>*/</script>
 </div>

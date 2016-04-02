@@ -13,7 +13,7 @@
 <div id="story-container" class="container">
     <script type='text/javascript'>/*<![CDATA[*/
         <?php
-                $stories = query("SELECT * from stories LIMIT 4");
+                $stories = query("SELECT * from stories LIMIT 400"); // TODO: make AJAX-ey
                 // get first sentences
                 $js_array = json_encode($stories);
                 echo "var stories = ". $js_array . ";\n";

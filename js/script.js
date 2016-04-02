@@ -2,6 +2,40 @@ console.log("JAVASCRIPT LOADED");
 var contributions;
 var story_id;
 var sentence_id = 0;
+var old_sentence_id = 0;
+
+var noActivity; // how active the user has been - determintes how frequently the server is pinged for updates
+
+/*
+ * Checks if others have submitted stories recently
+ */
+function check_for_updates(callback) {
+    var nextRequest = 2000; // milliseconds until next update check
+
+    if (sentence_id == old_sentence_id) {
+        noActivity++;
+    } else {
+        noActivity = 0; // reset activity is the story was updated
+        old_sentence_id = sentence_id;
+    }
+    if (noActivity > 15) {
+        nextRequest = 30000;
+    } else if (noActivity > 10) {
+        nextRequest = 20000;
+    } else if (noActivity > 6) {
+        nextRequest = 10000;
+    } else if (noActivity > 4) {
+        nextRequest = 5000;
+    }
+
+    get_updates(story_id, sentence_id);
+    setTimeout(callback,nextRequest);
+
+}
+// self executing timeout functions
+(function getUpdatesTimeoutFunction(){
+    check_for_updates(getUpdatesTimeoutFunction);
+})();
 
 /*
  * Renders all sentence fragments currently held
@@ -72,6 +106,9 @@ function submit_sentence() {
 
     // get data from post
     var text = document.getElementById('sentence-form').value;
+
+    // clear text
+    document.getElementById('sentence-form').value = '';
 
     // TODO: check on client side sentence is valid (eg. not too long)
 
