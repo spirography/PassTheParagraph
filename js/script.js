@@ -32,10 +32,13 @@ function check_for_updates(callback) {
     setTimeout(callback,nextRequest);
 
 }
-// self executing timeout functions
-(function getUpdatesTimeoutFunction(){
-    check_for_updates(getUpdatesTimeoutFunction);
-})();
+
+function start_checking_a_story_for_updates() {
+    // self executing timeout functions
+    (function getUpdatesTimeoutFunction(){
+        check_for_updates(getUpdatesTimeoutFunction);
+    })();
+}
 
 /*
  * Renders all sentence fragments currently held
@@ -182,7 +185,7 @@ var stories;
 var last_story_id;
 
 // browse by genre
-function display_stories() {
+function display_stories(cols) {
     if (stories === undefined || stories === null) {
         console.log("Tried to render a list of stories in a given genre, but there was nothing to render");
         return;
@@ -196,15 +199,15 @@ function display_stories() {
     for (var i = 0; i < stories.length; i++){
 
         // add new row if index is even
-        if (index % 2 === 0) {
+        if (index % cols === 0) {
             storiesDiv.innerHTML += '</div>'
             storiesDiv.innerHTML += '<div class="row text-center">'
         }
         storiesDiv.innerHTML +=
-            '<a href="read.php?s=' + stories[stories.length-i-1].id + '">' +
-            '<div class="col-md-6 row-height">' +
+            '<a href="read.php?s=' + stories[i].id + '">' +
+            '<div class="col-md-'+ Math.floor(12/cols) +' row-height">' +
             '<div class="story-preview">' +
-            '<h2>' + stories[stories.length-i-1].title + '</h2>' +
+            '<h2>' + stories[i].title + '</h2>' +
             '<p>' +
             // text goes here
            '</div>' +
@@ -216,3 +219,17 @@ function display_stories() {
 
     last_story_id = stories[stories.length-1].id;
 }
+
+/*
+ * Get earlier stories posted
+ */
+ function start_checking_for_earlier_stories() {
+     // self executing timeout functions
+     var storyContainerDiv = document.getElementById("story-container");
+     window.setInterval(function() {
+         // check if scrolled at bottom of page
+         if (storyContainerDiv.scrollTop >= storyContainerDiv.scrollHeight - storyContainerDiv.offsetHeight) {
+             console.log("TRIGGER RELOAD");
+         }
+     }, 1000);
+ }

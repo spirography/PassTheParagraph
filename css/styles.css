@@ -14,6 +14,9 @@
     border: 4px solid #ccc;
     border-radius: 3px;
 }
+.story-preview h2 {
+    text-align: center;
+}
 
 
 
