@@ -208,8 +208,7 @@ function display_stories(cols) {
             '<div class="col-md-'+ Math.floor(12/cols) +' row-height">' +
             '<div class="story-preview">' +
             '<h2>' + stories[i].title + '</h2>' +
-            '<p>' +
-            stories[i].content +
+            (stories[i].content === undefined ? "" : '<p>' + stories[i].content + '</p>') +
            '</div>' +
            '</div>' +
            '</a>'

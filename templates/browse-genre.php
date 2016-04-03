@@ -1,4 +1,28 @@
-<div class="jumbotron text-center" style="padding: 15px 0;"><h1>Science Fiction</h1></div>
+<div class="jumbotron text-center" style="padding: 15px 0;">
+    <?php
+    // get the correct category and do some error checking
+    $category = 0;
+    if (isset($_GET["g"])) {
+        $category = intval($_GET["g"]);
+        if ($category > 6 || $category < 1) {
+            $category = 0;
+        }
+    }
+    // display genre at top in big letters
+    echo "<h1>";
+    switch($category) {
+        case 1: echo "Realistic Fiction"; break;
+        case 2: echo "Science Fiction"; break;
+        case 3: echo "Mystery"; break;
+        case 4: echo "Fantasy"; break;
+        case 5: echo "Historical"; break;
+        case 6: echo "Comedy"; break;
+        case 0;
+        default: echo "All Genres"; break;
+    }
+    echo "</h1>"
+     ?>
+</div>
 
 <!-- get stories from database, display them -->
 <div id="story-container" class="container">
