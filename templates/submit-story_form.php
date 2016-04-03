@@ -1,4 +1,4 @@
-<form action="submit-story.php" method="post">
+<form action="submit.php" method="post">
     <fieldset>
         <div class="form-group" style="width: 300px; text-align: center; margin: auto;">
             <h1><font face = "HelveticaNeue">Submit a Story</font></h1>

@@ -53,7 +53,7 @@
 				<li><a href="index.php">home</a></li>
 				<li class="dropdown"><a class ="dropdown-toggle" data-toggle="dropdown" href="browse.php">browse<span class="caret"></span></a>
 	 				<ul class="dropdown-menu">
-	 					
+
 		 				<li><a href="browse.php?g=1">Realistic Fiction</a></li>
 		 				<li><a href="browse.php?g=2">Science Fiction</a></li>
 		 				<li><a href="browse.php?g=3">Mystery</a></li>
@@ -62,7 +62,7 @@
 						<li><a href="browse.php?g=6">Comedy</a></li>
 	 				</ul>
 				</li>
-				<li><a href="submit-story.php">submit</a></li>
+				<li><a href="submit.php">submit</a></li>
 				<li><a href="contact.php">contact</a></li>
 			</ul>
 		</div>
@@ -85,10 +85,10 @@
  <p class="text-center">Questions? Comments? Suggestions? Talk to us!</p>
   <div class="row test">
     <div class="col-md-4">
- 
+
       <p><span class="glyphicon glyphicon-map-marker"></span> University of Rochester, Rochester, NY 14627</p>
       <p><span class="glyphicon glyphicon-phone"></span> Phone: +1 585 275 2121</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> Email: <a href="mailto:admit@admissions.rochester.edu" target="_blank">admit@admissions.rochester.edu</a></p> 
+      <p><span class="glyphicon glyphicon-envelope"></span> Email: <a href="mailto:admit@admissions.rochester.edu" target="_blank">admit@admissions.rochester.edu</a></p>
     </div>
     <div class="col-md-8">
       <div class="row">
@@ -104,7 +104,7 @@
         <div class="col-md-12 form-group">
           <button class="btn pull-right" type="submit">Send</button>
         </div>
-      </div> 
+      </div>
     </div>
   </div>
 </div>
