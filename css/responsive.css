@@ -9,6 +9,15 @@ line-height: 1.42857143 !important;
 border-radius: 0;
 }
 
+a {
+  color: gray;
+}
+
+a:hover {
+  color: black;
+  font-style: bold;
+  text-decoration: none;
+}
 .navbar li a, .navbar .navbar-brand {
   color: #000 !important;
 }
@@ -18,13 +27,22 @@ border-radius: 0;
   color: red !important;
   background-color: #fff !important;
 }
+
 .navbar-default .navbar-toggle {
   border-color: transparent;
   color: #000 !important;
 }
 
 .jumbotron {
-    background-color: #eee;
+    color: #fff;
+    background-color: #333;
+}
+
+
+
+.jumbotron p, .jumbotron h2 {
+  font-family: 'Special Elite', cursive;
+  margin: 10px;
 }
 
 .period {
@@ -39,12 +57,12 @@ border-radius: 0;
     background-color: red;
 }
 
-
 /* footer */
 footer {
     background-color: #eee;
     padding: 32px;
 }
+
 
 
 /* Media */
@@ -53,3 +71,5 @@ footer {
   text-align: center;
   margin: 25px 0;
 }
+
+
