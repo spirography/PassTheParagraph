@@ -209,7 +209,7 @@ function display_stories(cols) {
         storiesDiv.innerHTML +=
             '<a href="read.php?s=' + stories[i].id + '">' +
             '<div class="col-md-'+ Math.floor(12/cols) +' row-height">' +
-            '<div class="story-preview genre-color-' + (genre === undefined ? "" : genre) + '">' +
+            '<div class="story-preview genre-color-' + stories[i].genre + '">' +
             '<h2>' + stories[i].title + '</h2>' +
             (stories[i].content === undefined ? "" : '<p>' + stories[i].content + '</p>') +
            '</div>' +
@@ -219,7 +219,9 @@ function display_stories(cols) {
     }
     storiesDiv.innerHTML += '</div>';
 
-    last_story_id = stories[stories.length-1].id;
+    if (stories.length > 0) {
+        last_story_id = stories[stories.length-1].id;
+    }
 }
 
 /*
