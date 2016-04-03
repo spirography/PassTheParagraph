@@ -71,12 +71,12 @@
   <div class="container-fluid">
 		<div class="about-body">
       <center><font face = "HelviticaNew"size="10">Contact Info</font></center>
-      <center><font face = "HelviticaNew"size="6">Mailing Address<span class="period">:</span></font></center>
-      <center><font face = "HelviticaNew">500 Joseph C<span class="period">.</span> Wilson Blvd<span class="period">.</span></font></center>
-      <center><font face = "HelviticaNew">Rochester<span class="period">,</span> NY 14627</font></center>
-      <center><font face = "HelviticaNew"size="6">E<span class="period">-</span>mail<span class="period">:</span></font></center>
-      <center><font face = "HelviticaNew">wedonthaveanemailyet@example<span class="period">.</span>com</font></center>
-      <center><font face = "HelviticaNew"size="5">pass the paragraph<span class="period">.</span></font></center>
+      <center><font face = "HelviticaNew"size="6">Mailing Address:</font></center>
+      <center><font face = "HelviticaNew">500 Joseph C. Wilson Blvd.</font></center>
+      <center><font face = "HelviticaNew">Rochester, NY 14627</font></center>
+      <center><font face = "HelviticaNew"size="6">E-mail:</font></center>
+      <center><font face = "HelviticaNew">wedonthaveanemailyet@example.com</font></center>
+      <center><font size="5">pass the paragraph<span class="period">.</span></font></center>
 
 		</div>
 </div>
