@@ -75,7 +75,7 @@
       <center>500 Joseph C<span class="period">.</span> Wilson Blvd<span class="period">.</span></center>
       <center>Rochester<span class="period">,</span> NY 14627</center>
       <center><font size="6">E<span class="period">-</span>mail<span class="period">:</span></font></center>
-      <center>wedonthaveanemailyet@example.com<span class="period">.</span>com</center>
+      <center>wedonthaveanemailyet@example<span class="period">.</span>com</center>
       <center><font size="5">pass the paragraph<span class="period">.</span></font></center>
 
 		</div>
