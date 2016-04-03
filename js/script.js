@@ -112,6 +112,8 @@ function submit_sentence() {
 
     // clear text
     document.getElementById('sentence-form').value = '';
+    // update display
+    display_char_limit();
 
     // TODO: check on client side sentence is valid (eg. not too long)
 
@@ -212,7 +214,7 @@ function display_stories(cols) {
             (stories[i].content === undefined ? "" : '<p>' + stories[i].content + '</p>') +
            '</div>' +
            '</div>' +
-           '</a>'
+           '</a>';
         index++;
     }
     storiesDiv.innerHTML += '</div>';

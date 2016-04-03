@@ -40,7 +40,7 @@
         query("INSERT INTO submissions (story_id, content) VALUES(?, ?)", $last_id, $form_beginning);
 
         // render that specific story page
-        pageredirect("browse.php?s=" . $last_id);
+        pageredirect("read.php?s=" . $last_id);
     }
     else
     {
