@@ -49,19 +49,50 @@
     margin: 10px;
     padding: 20px 30px;
     min-height: 100px;
-    border-left: 4px solid #e74c3c;
     background: #eee;
     /*border: 4px solid #ccc; /* very dark red */
     border-radius: 2px;
     font-size: 20px;
 }
+/* jumbotron bar */
+.themed-color-1, .genre-color-1:hover { background-color: #e74c3c; color: white; }
+.themed-color-2, .genre-color-2:hover { background-color: #2ecc71; color: white; }
+.themed-color-3, .genre-color-3:hover { background-color: #3498db; color: white; }
+.themed-color-4, .genre-color-4:hover { background-color: #9b59b6; color: white; }
+.themed-color-5, .genre-color-5:hover { background-color: #f1c40f; color: white; }
+.themed-color-6, .genre-color-6:hover { background-color: #e67e22; color: white; }
+
+/* pick story of specific genre */
+.genre-color-1 { border-color: #e74c3c; color: #e74c3c; }
+.genre-color-2 { border-color: #2ecc71; color: #2ecc71; }
+.genre-color-3 { border-color: #3498db; color: #3498db; }
+.genre-color-4 { border-color: #9b59b6; color: #9b59b6; }
+.genre-color-5 { border-color: #f1c40f; color: #f1c40f; }
+.genre-color-6 { border-color: #e67e22; color: #e67e22; }
+
+
+/* left side color in reading sentences */
+.fragment-1 { border-left: 4px solid #e74c3c; }
+.fragment-2 { border-left: 4px solid #2ecc71; }
+.fragment-3 { border-left: 4px solid #3498db; }
+.fragment-4 { border-left: 4px solid #9b59b6; }
+.fragment-5 { border-left: 4px solid #f1c40f; }
+.fragment-6 { border-left: 4px solid #e67e22; }
+
+/* date color in spans */
+.fragment-1 span { color: #810000; }
+.fragment-2 span { color: #00660B; }
+.fragment-3 span { color: #003275; }
+.fragment-4 span { color: #350050; }
+.fragment-5 span { color: #8B5E00; }
+.fragment-6 span { color: #801800; }
+
 .fragment p {
 }
 
 .fragment span {
     display: block;
     position: absolute;
-    color: #8E2E24; /* dark red */
     font-size: 12px;
 
     right: 10px;

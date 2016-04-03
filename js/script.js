@@ -64,7 +64,7 @@ function render_fragments(scrollToBottom) {
     contributions.forEach(function(entry) {
         console.log(entry);
         sentencesDiv.innerHTML +=
-            '<div class="fragment">' +
+            '<div class="fragment fragment-' + genre + '">' +
                 '<p>' + entry.content + '</p>' +
                 '<span></span><span>' + entry.date_created +'</span>' +
             '</div>';
@@ -183,6 +183,7 @@ function get_updates(story_id, last_sentence_id) {
 
 var stories;
 var last_story_id;
+var genre;
 
 // browse by genre
 function display_stories(cols) {
@@ -206,7 +207,7 @@ function display_stories(cols) {
         storiesDiv.innerHTML +=
             '<a href="read.php?s=' + stories[i].id + '">' +
             '<div class="col-md-'+ Math.floor(12/cols) +' row-height">' +
-            '<div class="story-preview">' +
+            '<div class="story-preview genre-color-' + (genre === undefined ? "" : genre) + '">' +
             '<h2>' + stories[i].title + '</h2>' +
             (stories[i].content === undefined ? "" : '<p>' + stories[i].content + '</p>') +
            '</div>' +

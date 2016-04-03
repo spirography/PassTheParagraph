@@ -13,7 +13,7 @@
         echo $key." has the value ". $value . "<br>";
     }*/
 
-    echo '<div class="jumbotron text-center" style="padding: 15px 0;"><h1>' . $story[0]["title"] . '</h1></div>';
+    echo '<div class="jumbotron text-center themed-color-' . $story[0]["genre"] . '" style="padding: 15px 0;"><h1>' . $story[0]["title"] . '</h1></div>';
 ?>
 <div id="reading-container">
 <div id="sentences">
@@ -23,6 +23,7 @@
             $js_array = json_encode($contributions);
             echo "var contributions = ". $js_array . ";\n";
             echo "var story_id = parseInt(". json_encode($story_id) . ");\n";
+            echo "var genre = parseInt(" . json_encode($story[0]["genre"]). ");\n";
             echo "render_fragments(false);\n";
             echo "start_checking_a_story_for_updates();\n"; // check if others have added to story
         ?>;/*]]>*/</script>
