@@ -61,6 +61,7 @@
 						<li><a href="browse.php?g=6">Comedy</a></li>
 	 				</ul>
 				</li>
+				<li><a href="submit-story.php">submit</a></li>
 				<li><a href="about.php">contact</a></li>
 			</ul>
 		</div>
@@ -70,11 +71,11 @@
   <div class="container-fluid">
 		<div class="about-body">
       <center><font size="10">Contact Info</font></center>
-      <center><font size="6">Mailing Address:</font></center>
-      <center>500 Joseph C. Wilson Blvd.</center>
-      <center>Rochester, NY 14627</center>
-      <center><font size="6">E-mail:</font></center>
-      <center>passtheparagraph@gmail.com</center>
+      <center><font size="6">Mailing Address<span class="period">:</span></font></center>
+      <center>500 Joseph C<span class="period">.</span> Wilson Blvd<span class="period">.</span></center>
+      <center>Rochester<span class="period">,</span> NY 14627</center>
+      <center><font size="6">E<span class="period">-</span>mail<span class="period">:</span></font></center>
+      <center>wedonthaveanemailyet@example.com<span class="period">.</span>com</center>
       <center><font size="5">pass the paragraph<span class="period">.</span></font></center>
 
 		</div>

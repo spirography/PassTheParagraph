@@ -90,6 +90,7 @@
 						<li><a href="browse.php?g=6">Comedy</a></li>
 	 				</ul>
 				</li>
+				<li><a href="submit-story.php">submit</a></li>
 				<li><a href="contact.php">contact</a></li>
 			</ul>
 		</div>
