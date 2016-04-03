@@ -7,11 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // check if values are given
     $contents = json_decode(file_get_contents("php://input"), true);
-    if ($contents == null) {
+    if (!isset($contents)) {
         echo "ERROR";
     } else {
         // check if JSON was correctly defined for the variables
-        if ($contents["sentence"] == null || $contents["story"] == null) {
+        if (!isset($contents["sentence"]) || !isset($contents["story"])) {
             echo "ERROR";
         } else {
             // TODO: check if sentence is a valid sentence id

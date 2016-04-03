@@ -173,7 +173,7 @@ function get_updates(story_id, last_sentence_id) {
     request.open('POST', 'check_sentence_update.php', true);
     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     var data = {sentence: last_sentence_id, story: story_id};
-    request.send(JSON.stringify(data)); // TODO: use correct story id
+    request.send(JSON.stringify(data));
 
 }
 
@@ -227,13 +227,60 @@ function display_stories(cols) {
 /*
  * Get earlier stories posted
  */
- function start_checking_for_earlier_stories() {
-     // self executing timeout functions
-     var storyContainerDiv = document.getElementById("story-container");
-     window.setInterval(function() {
-         // check if scrolled at bottom of page
-         if (storyContainerDiv.scrollTop >= storyContainerDiv.scrollHeight - storyContainerDiv.offsetHeight) {
-             console.log("TRIGGER RELOAD");
-         }
-     }, 1000);
- }
+function start_checking_for_earlier_stories() {
+    // in case page can't be scrolled yet
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+        load_more_stories();
+    }
+    // scroll event setup
+    window.onscroll = function(ev) {
+        console.log("scrolled");
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+            load_more_stories();
+        }
+    };
+}
+
+
+/*
+ * Loads earlier stories through the magic of AJAX
+ */
+function load_more_stories() {
+    console.log("TRYING TO LOAD MORE STORIES...");
+
+    if (genre == null) {
+        console.log("Couldn't get updates; genre is null");
+        return;
+    } else if (last_story_id == null) {
+        console.log("Couldn't get updates; last_story_id is null");
+        return;
+    }
+
+    // make request
+    // post to server via ajax
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        var DONE = this.DONE || 4;
+        if (this.readyState === DONE && this.status == 200){
+            var response = JSON.parse(this.responseText);
+            console.log(response);
+            if (response.length < 1) {
+                return; // no updates
+            }
+            console.log(response[response.length-1].id);
+            last_story_id = response[response.length-1].id;
+
+            // add new sentences to window
+            stories = response;
+            display_stories();
+        }
+    };
+
+    request.open('POST', 'check_for_more_stories.php', true);
+    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    var data = {category: genre, story: last_story_id};
+    console.log("DATA: ", data);
+    request.send(JSON.stringify(data));
+
+}
