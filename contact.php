@@ -53,6 +53,7 @@
 				<li><a href="index.php">home</a></li>
 				<li class="dropdown"><a class ="dropdown-toggle" data-toggle="dropdown" href="browse.php">browse<span class="caret"></span></a>
 	 				<ul class="dropdown-menu">
+	 					
 		 				<li><a href="browse.php?g=1">Realistic Fiction</a></li>
 		 				<li><a href="browse.php?g=2">Science Fiction</a></li>
 		 				<li><a href="browse.php?g=3">Mystery</a></li>
@@ -62,24 +63,28 @@
 	 				</ul>
 				</li>
 				<li><a href="submit-story.php">submit</a></li>
-				<li><a href="about.php">contact</a></li>
+				<li><a href="contact.php">contact</a></li>
 			</ul>
 		</div>
 
 	</div>
 
-  <div class="container-fluid">
+
+
+ 
+
+</nav>
+
+
+ <div class="container-fluid">
 		<div class="about-body">
-      <center><font face = "HelviticaNew"size="10">Contact Info</font></center>
-      <center><font face = "HelviticaNew"size="6">Mailing Address:</font></center>
-      <center><font face = "HelviticaNew">500 Joseph C. Wilson Blvd.</font></center>
-      <center><font face = "HelviticaNew">Rochester, NY 14627</font></center>
-      <center><font face = "HelviticaNew"size="6">E-mail:</font></center>
-      <center><font face = "HelviticaNew">wedonthaveanemailyet@example.com</font></center>
+      <center><font face = "HelveticaNeue"size="10">Contact</font></center>
+      <center><font face = "HelveticaNeue"size="6">Mailing Address:</font></center>
+      <center><font face = "HelveticaNeue">500 Joseph C. Wilson Blvd.</font></center>
+      <center><font face = "HelveticaNeue">Rochester, NY 14627</font></center>
+      <center><font face = "HelveticaNeue"size="6">E-mail:</font></center>
+      <center><font face = "HelveticaNeue">wedonthaveanemailyet@example.com</font></center>
       <center><font size="5">pass the paragraph<span class="period">.</span></font></center>
 
 		</div>
 </div>
-
-
-</nav>
