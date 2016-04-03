@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>pass the paragraph.</title>
+	<title>contact | pass the paragraph.</title>
 
 
 	<!-- default -->
@@ -68,23 +68,101 @@
 		</div>
 
 	</div>
-
-
-
- 
-
 </nav>
 
 
- <div class="container-fluid">
-		<div class="about-body">
-      <center><font face = "HelveticaNeue"size="10">Contact</font></center>
-      <center><font face = "HelveticaNeue"size="6">Mailing Address:</font></center>
-      <center><font face = "HelveticaNeue">500 Joseph C. Wilson Blvd.</font></center>
-      <center><font face = "HelveticaNeue">Rochester, NY 14627</font></center>
-      <center><font face = "HelveticaNeue"size="6">E-mail:</font></center>
-      <center><font face = "HelveticaNeue">wedonthaveanemailyet@example.com</font></center>
-      <center><font size="5">pass the paragraph<span class="period">.</span></font></center>
 
-		</div>
+
+<!-- jumbotron -->
+<div class="jumbotron text-center">
+	<h2>Contact</h2>
 </div>
+
+
+
+<!-- Contact container -->
+<div class="container">
+ <p class="text-center">Questions? Comments? Suggestions? Talk to us!</p>
+  <div class="row test">
+    <div class="col-md-4">
+ 
+      <p><span class="glyphicon glyphicon-map-marker"></span> University of Rochester, Rochester, NY 14627</p>
+      <p><span class="glyphicon glyphicon-phone"></span> Phone: +1 585 275 2121</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> Email: <a href="mailto:admit@admissions.rochester.edu" target="_blank">admit@admissions.rochester.edu</a></p> 
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- google maps -->
+<style>
+#googleMap {
+    width: 100%; /* Span the entire width of the screen */
+    height: 400px; /* Set the height to 400 pixels */
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(50%); /* Change the color of the map to black and white * /
+}
+</style>
+
+
+
+
+
+
+<!-- Add Google Maps -->
+
+<div id="googleMap"></div>
+
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(43.128597, -77.630039);
+
+function initialize() {
+var mapProp = {
+center:myCenter,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+position:myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</body>
+</html>
