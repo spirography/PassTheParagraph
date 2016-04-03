@@ -24,12 +24,7 @@
      */
     function apologize($message, $have_navbar = true)
     {
-        if ($have_navbar) {
-            render("apology.php", ["message" => $message]);
-        } else {
-            render_no_navbar("apology.php", ["message" => $message]);
-        }
-        exit;
+        render_no_navbar("apology.php", ["message" => $message]);
     }
 
 
@@ -188,13 +183,11 @@
             extract($values);
 
             // render header
-            require("templates/header_blank.php");
 
             // render template
             require("templates/$template");
 
             // render footer
-            require("templates/footer.php");
         }
 
         // else err

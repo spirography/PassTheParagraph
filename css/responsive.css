@@ -34,8 +34,8 @@ a:hover {
 }
 
 .jumbotron {
-    color: #fff;
-    background-color: #333;
+    /*color: #fff;
+    background-color: #333;*/
 }
 
 
@@ -71,5 +71,3 @@ footer {
   text-align: center;
   margin: 25px 0;
 }
-
-

@@ -3,8 +3,8 @@
 <!-- Intro Jumbotron-->
 <div class ="jumbotron text-center">
 
-	<h1>Introduction</h1>
-	<p>Pass the Paragraph is a website where individuals can collaborate to develop a story. You can either continue someone else’s story or start your own and watch it evolve as others contribute. Each segment contributed must be less than 140 characters.</p>
+	<h1>Pass the Paragraph</h1>
+	<p>Pass the Paragraph is a website where individuals can collaborate to develop a story. You can either continue someone else’s story or start your own and watch it evolve as others contribute. Each segment contributed must be <?php echo MAX_CHARACTERS; ?> characters or less.</p>
 
 </div>
 

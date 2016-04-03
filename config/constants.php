@@ -20,4 +20,7 @@
     // your database's username
     define("USERNAME", "root");
 
+    // max characters in a fragment
+    define("MAX_CHARACTERS", "140");
+
 ?>

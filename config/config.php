@@ -11,7 +11,7 @@
     error_reporting(E_ALL);
 
     // requirements
-    require_once("constants.php");
+    // require_once("constants.php");
     require("functions.php");
 
 ?>
