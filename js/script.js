@@ -273,7 +273,7 @@ function load_more_stories() {
 
             // add new sentences to window
             stories = response;
-            display_stories();
+            display_stories(2);
         }
     };
 

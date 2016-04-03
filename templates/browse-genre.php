@@ -30,9 +30,9 @@
     <script type='text/javascript'>/*<![CDATA[*/
         <?php
                 if ($category=== 0) { // all genres
-                    $stories = query("SELECT * from stories ORDER BY id DESC LIMIT 4"); // TODO: make AJAX-ey
+                    $stories = query("SELECT * from stories ORDER BY id DESC LIMIT 8");
                 } else { // one specific genre
-                    $stories = query("SELECT * from stories WHERE genre=? ORDER BY id DESC LIMIT 4", $category); // TODO: make AJAX-ey
+                    $stories = query("SELECT * from stories WHERE genre=? ORDER BY id DESC LIMIT 8", $category); // TODO: make AJAX-ey
                 }
 
                 // get first sentences

@@ -19,14 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // check for updates
         if ($contents["category"] === 0) {
-            $updates = query("SELECT * from submissions WHERE id > ?", $contents["story"]);
+            $updates = query("SELECT * from stories WHERE id < ? ORDER BY id DESC", $contents["story"]);
         } else {
-            $updates = query("SELECT * from submissions WHERE genre=? AND id > ?", $contents["category"], $contents["story"]);
+            $updates = query("SELECT * from stories WHERE genre=? AND id < ? ORDER BY id DESC", $contents["category"], $contents["story"]);
         }
 
         // return updates as JSON array
-        // echo json_encode($updates);
-        echo "HELLO";
+        echo json_encode($updates);
 
     }
 }
