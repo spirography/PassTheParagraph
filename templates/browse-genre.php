@@ -29,12 +29,17 @@
 <div id="story-container" class="container">
     <script type='text/javascript'>/*<![CDATA[*/
         <?php
-                $stories = query("SELECT * from stories ORDER BY id DESC LIMIT 4"); // TODO: make AJAX-ey
+                if ($category=== 0) { // all genres
+                    $stories = query("SELECT * from stories ORDER BY id DESC LIMIT 4"); // TODO: make AJAX-ey
+                } else { // one specific genre
+                    $stories = query("SELECT * from stories WHERE genre=? ORDER BY id DESC LIMIT 4", $category); // TODO: make AJAX-ey
+                }
+
                 // get first sentences
                 $js_array = json_encode($stories);
                 echo "var stories = ". $js_array . ";\n";
                 echo "var genre = " . json_encode($category) . ";\n";
-                echo "var last_story_id = stories[stories.length-1].id;\n";
+                echo "var last_story_id = (stories.length > 0 ? stories[stories.length-1].id : 0);\n"; // in case array is empty
                 echo "display_stories(2);\n";
                 echo "start_checking_for_earlier_stories();\n";
             ?>;/*]]>*/</script>
