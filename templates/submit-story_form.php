@@ -11,9 +11,11 @@
         <!-- GENRE START -->
         <select name="genre" class="form-control">
             <option value="1">Realistic Fiction</option>
-            <option value="2">Historical</option>
+            <option value="2">Science Fiction</option>
             <option value="3">Mystery</option>
-            <option value="4">Science Fiction</option>
+            <option value="4">Fantasy</option>
+            <option value="5">Historical</option>
+            <option value="6">Comedy</option>
         </select>
         <br>
         <!-- GENRE END -->
