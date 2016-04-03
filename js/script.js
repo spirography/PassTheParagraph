@@ -89,7 +89,6 @@ function render_fragments(scrollToBottom) {
  * Displays the number of characters typed out of the allotted amount
  */
 function display_char_limit() {
-    console.log("hi");
     // get character limit
     var char_limit = document.getElementById("sentence-form").maxLength;
     var num_chars = document.getElementById("sentence-form").value.length;
