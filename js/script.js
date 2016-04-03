@@ -109,12 +109,15 @@ function submit_sentence() {
     // get data from post
     var text = document.getElementById('sentence-form').value;
 
+    // if too short, don't post
+    if (text.length < 7) {
+        return;
+    }
+
     // clear text
     document.getElementById('sentence-form').value = '';
     // update display
     display_char_limit();
-
-    // TODO: check on client side sentence is valid (eg. not too long)
 
     // post to server via ajax
     var request = new XMLHttpRequest();

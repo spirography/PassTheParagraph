@@ -30,7 +30,7 @@
     <div id="sentence-display">&nbsp;</div>
 
         <!-- CONTRIBUTION START -->
-        <textarea id="sentence-form" name="sentence" rows="2" cols="70" maxlength="140" onchange="display_char_limit()" onkeyup="display_char_limit()" class="form-control"></textarea>
+        <textarea id="sentence-form" name="sentence" rows="2" maxlength="140" onchange="display_char_limit()" onkeyup="display_char_limit()" class="form-control"></textarea>
         <!--CONTRIBUTION END -->
 
         <script type='text/javascript'>/*<![CDATA[*/<?php

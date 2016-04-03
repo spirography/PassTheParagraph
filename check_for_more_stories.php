@@ -19,9 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // check for updates
         if ($contents["category"] === 0) {
-            $updates = query("SELECT * from stories WHERE id < ? ORDER BY id DESC", $contents["story"]);
+            $updates = query("SELECT * from stories WHERE id < ? ORDER BY id DESC LIMIT 4", $contents["story"]);
         } else {
-            $updates = query("SELECT * from stories WHERE genre=? AND id < ? ORDER BY id DESC", $contents["category"], $contents["story"]);
+            $updates = query("SELECT * from stories WHERE genre=? AND id < ? ORDER BY id DESC LIMIT 4", $contents["category"], $contents["story"]);
         }
 
         // return updates as JSON array
