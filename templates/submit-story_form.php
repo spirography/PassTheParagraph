@@ -25,7 +25,7 @@
 
         <!-- FIRST SENTENCE START -->
         <div id="sentence-display">&nbsp;</div>
-        <textarea id="sentence-form" name="beginning" placeholder="The first few sentences of your story" rows="3" maxlength="200" onchange="display_char_limit()" onkeyup="display_char_limit()" class="form-control"></textarea>
+        <textarea id="sentence-form" name="beginning" placeholder="The first few sentences of your story" rows="5" maxlength="200" onchange="display_char_limit()" onkeyup="display_char_limit()" class="form-control"></textarea>
         <script type="text/javascript">display_char_limit();</script>
         <br>
         <!--FIRST SENTENCE END -->

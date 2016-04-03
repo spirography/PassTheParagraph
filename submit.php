@@ -16,7 +16,7 @@
         // TODO: check if title is within the valid number of characters
 
         $form_genre = htmlspecialchars($_POST["genre"]);
-        if (empty($form_genre) || $form_genre < 1 || $form_genre > 4 || !ctype_digit($form_genre))
+        if (empty($form_genre) || $form_genre < 1 || $form_genre > 6 || !ctype_digit($form_genre))
         {
             apologize("Invalid genre chosen: " . $form_genre);
         }
