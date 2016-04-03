@@ -21,6 +21,6 @@
     define("USERNAME", "root");
 
     // max characters in a fragment
-    define("MAX_CHARACTERS", "140");
+    define("MAX_CHARACTERS", "200");
 
 ?>

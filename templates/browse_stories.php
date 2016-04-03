@@ -4,7 +4,7 @@
 <div class ="jumbotron text-center">
 
 	<h1>Pass the Paragraph</h1>
-	<p>Pass the Paragraph is a website where individuals can collaborate to develop a story. You can either continue someone else’s story or start your own and watch it evolve as others contribute. Each segment contributed must be <?php echo MAX_CHARACTERS; ?> characters or less.</p>
+	<p>Pass the Paragraph is a website where individuals can collaborate to develop a story. You can either continue someone else’s story or start your own and watch it evolve as others contribute. Each segment contributed must be 200 characters or less.</p>
 
 </div>
 
